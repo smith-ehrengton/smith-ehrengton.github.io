@@ -1,8 +1,7 @@
-<!DOCTYPE html>
 <html>
     <head>
         <title>Ehrengton's Lit Website</title>
-        <style>
+        <style type="text/css">
             body {border: 2px solid;
                 border-radius: 25px;
                 border-color: black;
@@ -18,7 +17,10 @@
                 font-size: 1.5em;
                 font-weight: bold;
             }
-            [id=all-contents] {
+            h1 {
+                margin: 10px;
+            }
+            #all-contents {
                 max-width: 800px;
                 margin: auto;
             }
@@ -29,7 +31,6 @@
                 border-color: black;
                 background: rgb(140, 255, 247);
                 margin: 0 auto;
-                margin-bottom: 20px;
                 display: flex;
                 padding: 10px;
             }
@@ -48,7 +49,7 @@
             }
             nav a {
                 text-decoration: none;
-                color: #000000;
+                color: rgb(0, 0, 0);
             }
     
             /* main container area beneath menu */
@@ -58,57 +59,51 @@
                 background: rgb(79, 249, 238);
                 display: flex;
             }
-            [class=sidebar] {
-                margin-right: 25px;
-                padding: 10px;
-            }
-            [class=sidebar] img {border: 2px solid;
-                border-radius: 25px;
-                border-color: black;
-                width: 200px;
-            }
-            [class=content] {
+            .content {
                 flex: 1;
                 padding: 15px;
             }
-            [class=interests] header {
-                font-size: 1.25em;
+            
+            /* portfolio styles */
+            #portfolio {
+                list-style-type: none;
+                padding-left: 0;
             }
             
+            #portfolio li {
+                background: #fff;
+                padding: 10px;
+                border-radius: 10px;
+                margin-bottom: 10px;
+            }
+            
+            #portfolio li:hover {
+                background: #eee;
+            } 
+            
+            #portfolio a {
+                text-decoration: none;
+                color: #454545;
+            }
         </style>
     </head>
-    
+         
     <body>
-        <div id="all contents">
-            <nav>
-       
-                <header>Ehrengton's Lit Website</header>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
+        <nav>
+            <header>Ehrengton's Lit Website</header>
+            <ul>
+                <li><a href=index.html">Home</a>
+                </li>
+                <li><a href="portfolio.html">Portfolio</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <div class="content">
+                <h1>Portfolio</h1>
+                <ul id="portfolio">
                 </ul>
-            </nav>
-            
-            <main>
-                <div class="sidebar">
-                    
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWkZ3Teu-vvm1lOvyBq3kj8Cgx5NT72yGbLBrFwE8K_wScselWhQ">
-                </div>
-                
-                <div class="content">
-                    <header>Ehrengton Smith</header>
-                    
-                    <p>Student at Northshore High</p>
-                    <section class="interest">
-                        <header>Interests</header>
-                        <ul>
-                            <li>Fashion</li>
-                            <li>Playing Music</li>
-                            <li>Art</li>
-                        </ul>
-                    </section>
-                </div>
-            </main>
-        </div>
+            </div>
+        </main>
     </body>
 </html>
